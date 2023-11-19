@@ -28,6 +28,8 @@ public class bot
             _client.MessageReceived += Receiver.MessageReceiver;
             await _client.StartAsync();
 
+            await _client.SetGameAsync("Made in C", null, ActivityType.Watching);
+
             // Block this task until the program is closed.
             await Task.Delay(-1);
 
